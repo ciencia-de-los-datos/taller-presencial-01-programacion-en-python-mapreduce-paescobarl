@@ -136,7 +136,7 @@ def create_marker(output_directory):
 # Escriba la función job, la cual orquesta las funciones anteriores.
 #
 def job(input_directory, output_directory):
-    sequence = load_input("input")
+    sequence = load_input(input_directory)
     sequence = mapper(sequence)
     sequence = shuffle_and_sort(sequence)
     sequence = reducer(sequence)
